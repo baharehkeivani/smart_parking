@@ -1,4 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:smart_parking/module/constants.dart';
 
 import '../model/lot_model.dart';
 
@@ -36,5 +37,12 @@ class MainScreenCubit extends Cubit<MainScreenState> {
 
   void updateNow(){
     emit(UpdateNowState());
+  }
+
+  void logout(){
+    // TODO : backend
+    // TODO : empty hive
+    Constants.instance.userModel = null;
+    emit(LogoutState());
   }
 }

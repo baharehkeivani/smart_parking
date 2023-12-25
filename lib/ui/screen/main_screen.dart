@@ -44,6 +44,13 @@ class _MainScreenState extends State<MainScreen> {
               fontWeight: FontWeight.bold,
             ),
           ),
+          leading: IconButton(
+            icon: const Icon(
+              Icons.logout,
+              color: Colors.white,
+            ),
+            onPressed: context.read<MainScreenCubit>().logout,
+          ),
         ),
         body: BlocConsumer<MainScreenCubit, MainScreenState>(
             listener: (context, state) {
@@ -53,6 +60,9 @@ class _MainScreenState extends State<MainScreen> {
           }
           if (state is UpdateNowState) {
             now = DateTime.now();
+          }
+          if (state is LogoutState) {
+            context.pushReplacement('/');
           }
         }, builder: (context, state) {
           return SingleChildScrollView(
@@ -164,7 +174,7 @@ class _MainScreenState extends State<MainScreen> {
         return GestureDetector(
           onTap: () {
             if (lot.x == Constants.instance.userModel?.carSpace?.x &&
-                    lot.y == Constants.instance.userModel?.carSpace?.y) {
+                lot.y == Constants.instance.userModel?.carSpace?.y) {
               showDialog(
                   context: context,
                   builder: (dialogContext) => AlertDialog(
@@ -191,15 +201,14 @@ class _MainScreenState extends State<MainScreen> {
                           )
                         ],
                       ));
-            }
-            else if (lot.status == LotStatus.free) {
+            } else if (lot.status == LotStatus.free) {
               showModalBottomSheet(
                   context: context,
                   showDragHandle: true,
                   builder: (context) => BlocProvider(
-                    create: (context) => ReserveCubit(),
-                    child: const ReserveModal(),
-                  ));
+                        create: (context) => ReserveCubit(),
+                        child: const ReserveModal(),
+                      ));
             }
           },
           child: Container(

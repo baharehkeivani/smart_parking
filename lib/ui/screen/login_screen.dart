@@ -38,8 +38,6 @@ class _LoginScreenState extends State<LoginScreen> {
   TextEditingController carTypeController = TextEditingController();
   FocusNode carTypeNode = FocusNode();
 
-  bool showHeader = true;
-
   void submit() {
     if (isLoginMode) {
       context
@@ -76,9 +74,6 @@ class _LoginScreenState extends State<LoginScreen> {
               loading = false; // TODO : should add verification in the future
             }
             if (state is ToggledModeState) {
-              if (isLoginMode) {
-                showHeader = false;
-              }
               idController.clear();
               passwordController.clear();
               nameController.clear();
@@ -87,9 +82,6 @@ class _LoginScreenState extends State<LoginScreen> {
               carIdController.clear();
               formKey.currentState!.reset();
               isLoginMode = !isLoginMode;
-            }
-            if (state is ShowHeaderState) {
-              showHeader = true;
             }
             if (state is FailedState) {
               loading = false;
@@ -116,16 +108,14 @@ class _LoginScreenState extends State<LoginScreen> {
                   alignment: Alignment.bottomCenter,
                   padding: const EdgeInsets.fromLTRB(8, 8, 8, 32),
                   duration: const Duration(seconds: 1),
-                  onEnd: () {
-                    if (isLoginMode) {
-                      context.read<LoginScreenCubit>().showHeader();
-                    }
-                  },
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                      if (showHeader)
-                        Image.asset('assets/image/parking.webp', width: 400),
+                        AnimatedContainer(
+                          height: isLoginMode ? 275 : 0,
+                            curve: Curves.linearToEaseOut,
+                            duration: const Duration(seconds: 1),
+                            child: Image.asset('assets/image/parking.webp')),
                       const Text(
                         "پارکینگ هوشمند",
                         style: TextStyle(

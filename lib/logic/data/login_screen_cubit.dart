@@ -44,8 +44,4 @@ class LoginScreenCubit extends Cubit<LoginScreenState> {
   void toggleMode(){
     emit(ToggledModeState());
   }
-  void showHeader(){
-    emit(ShowHeaderState());
-  }
-
 }

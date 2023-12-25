@@ -17,5 +17,3 @@ class FailedState extends LoginScreenState {
 }
 
 class ToggledModeState extends LoginScreenState {}
-
-class ShowHeaderState extends LoginScreenState {}

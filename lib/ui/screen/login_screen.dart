@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:smart_parking/logic/data/login_screen_cubit.dart';
 import 'package:smart_parking/ui/widget/custom_button.dart';
 
+import '../widget/car_plate.dart';
 import '../widget/flush_bar/flush_bar.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -111,11 +112,11 @@ class _LoginScreenState extends State<LoginScreen> {
                   child: Column(
                     mainAxisSize: MainAxisSize.min,
                     children: [
-                        AnimatedContainer(
+                      AnimatedContainer(
                           height: isLoginMode ? 275 : 0,
-                            curve: Curves.linearToEaseOut,
-                            duration: const Duration(seconds: 1),
-                            child: Image.asset('assets/image/parking.webp')),
+                          curve: Curves.linearToEaseOut,
+                          duration: const Duration(seconds: 1),
+                          child: Image.asset('assets/image/parking.webp')),
                       const Text(
                         "پارکینگ هوشمند",
                         style: TextStyle(
@@ -225,27 +226,36 @@ class _LoginScreenState extends State<LoginScreen> {
                           ),
                         ),
                         if (!isLoginMode)
-                          Padding(
-                            padding: const EdgeInsets.only(bottom: 8),
-                            child: TextFormField(
-                              focusNode: carIdNode,
+                          // Padding(
+                          //   padding: const EdgeInsets.only(bottom: 8),
+                          //   child: TextFormField(
+                          //     focusNode: carIdNode,
+                          //     controller: carIdController,
+                          //     onTapOutside: (_) {
+                          //       carIdNode.unfocus();
+                          //     },
+                          //     decoration: const InputDecoration(
+                          //         border: OutlineInputBorder(),
+                          //         labelText: 'پلاک ماشین',
+                          //         hintTextDirection: TextDirection.rtl),
+                          //     validator: MultiValidator([
+                          //       RequiredValidator(errorText: "* الزامی"),
+                          //     ]),
+                          //     onFieldSubmitted: (value) {
+                          //       carIdNode.unfocus();
+                          //       carTypeNode.requestFocus();
+                          //     },
+                          //   ),
+                          // ),
+                          // CarIdTextField(
+                          //   carIdNode: carIdNode,
+                          //   controller: carIdController,
+                          //   nextNode: carTypeNode,
+                          // ),
+                          CarPlate(
                               controller: carIdController,
-                              onTapOutside: (_) {
-                                carIdNode.unfocus();
-                              },
-                              decoration: const InputDecoration(
-                                  border: OutlineInputBorder(),
-                                  labelText: 'پلاک ماشین',
-                                  hintTextDirection: TextDirection.rtl),
-                              validator: MultiValidator([
-                                RequiredValidator(errorText: "* الزامی"),
-                              ]),
-                              onFieldSubmitted: (value) {
-                                carIdNode.unfocus();
-                                carTypeNode.requestFocus();
-                              },
-                            ),
-                          ),
+                              firstFocusNode: carIdNode,
+                              nextFocusNode: carTypeNode),
                         if (!isLoginMode)
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8),

@@ -10,4 +10,4 @@ Welcome to the IoT Parking Management App! This Flutter project provides a user 
 - **User-friendly Interface:** Intuitive and easy-to-use interface for seamless parking management.
 
 ## Screen Shots
-![Login Screen _ Mobile Application]([[https://example.com/parking_management_app_screenshot.png](https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link](https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)
+![Login Screen _ Mobile Application](https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)

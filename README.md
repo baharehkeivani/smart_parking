@@ -15,6 +15,6 @@ Welcome to the IoT Parking Management App! This Flutter project provides a user 
 <img src="https://biaupload.com/do.php?imgf=org-55c3cc38fa133.png" alt="Parking State Screen _ Mobile Application" width="200"> 
 <img src="https://biaupload.com/do.php?imgf=org-769907acf9bc4.png" alt="Reservation Modal Screen _ Mobile Application" width="200">
 
-![Login Screen _ Web Output](https://biaupload.com/do.php?imgf=org-582ec03f9e3c1.png) 
-![Parking State Screen _ Web Output](https://biaupload.com/do.php?imgf=org-a6fef875e7d22.png)
 
+<img src="https://biaupload.com/do.php?imgf=org-582ec03f9e3c1.png" alt="Login Screen _ Web Output" width="400">
+<img src="https://biaupload.com/do.php?imgf=org-a6fef875e7d22.png" alt="Parking State Screen _ Web Output" width="400">

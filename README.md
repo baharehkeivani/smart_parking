@@ -1,16 +1,13 @@
-# smart_parking
+# IoT Parking Management App
 
-A new Flutter project.
+Welcome to the IoT Parking Management App! This Flutter project provides a user interface for managing parking slots, allowing users to view available parking spaces, reserve slots if necessary, and monitor their car's state while parked.
 
-## Getting Started
+## Features
 
-This project is a starting point for a Flutter application.
+- **Parking Slot Availability:** View real-time information about available parking slots.
+- **Reservation System:** Reserve parking slots in advance if needed.
+- **Car State Monitoring:** Monitor your car's state while parked, such as temperature, security status, etc.
+- **User-friendly Interface:** Intuitive and easy-to-use interface for seamless parking management.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screen Shots
+![Login Screen _ Mobile Application]([https://example.com/parking_management_app_screenshot.png](https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)https://drive.google.com/file/d/1RHLUKKcVjlqXWyKbyZHEP2lUHE4c3SeV/view?usp=share_link)
